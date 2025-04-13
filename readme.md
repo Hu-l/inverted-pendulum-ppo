@@ -1,4 +1,6 @@
-# 基于PPO的倒立摆swing-up控制项目
+# 基于PPO的倒立摆swing-up控制项目( 2024-2025春强化学习课程作业)
+## 作者
+[Long Hu](https://github.com/Hu-l)
 
 本项目实现了一个使用**强化学习 PPO 算法**训练的倒立摆控制器，能够实现从倒挂状态起摆至平衡点的全过程控制。
 
@@ -33,7 +35,7 @@ inverted-pendulum-ppo
 ##  环境说明
 
 - **状态空间**：\[角度（rad）, 角速度（rad/s）\]
-- **动作空间**：电压输入 ∈ [−6V, 6V]
+- **动作空间**：电压输入 ∈ [−3V, 3V]
 - **奖励函数**：惩罚偏离平衡位置、角速度和能耗
 - **初始状态**：从下垂位置 \( \pi \) 附近开始
 
@@ -74,7 +76,7 @@ python plot_tensorboard_logs.py
 ## 实验结果示例
 
 - ✅ 最终平均奖励：约 -28.1
-- ✅ 每次运行满步长（1000步），无失败
+- ✅ 每次运行满步长（1000步 5秒），无失败
 - ✅ explained variance ≈ 0.92，value 网络拟合良好
 - ✅ gif 动画清晰展示起摆和稳定过程
 
@@ -89,9 +91,15 @@ python plot_tensorboard_logs.py
 ---
 
 ## 环境依赖
+env==0.1.0
+gym==0.26.2
+imageio==2.36.1
+matplotlib==3.10.1
+numpy==1.23.5
+stable_baselines3==2.5.0
 
 ```bash
-pip install gym matplotlib imageio stable-baselines3 tensorboard
+pip install -r requirements.txt
 ```
 
 ---
@@ -99,5 +107,5 @@ pip install gym matplotlib imageio stable-baselines3 tensorboard
 ## 致谢与引用
 
 - Stable-Baselines3: https://github.com/DLR-RM/stable-baselines3
-- OpenAI Gym: https://github.com/openai/gym
+- Chatgpt: https://chatgpt.com/
 （chatgpt救我狗命）

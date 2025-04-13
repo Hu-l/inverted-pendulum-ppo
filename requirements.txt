@@ -1,0 +1,6 @@
+env==0.1.0
+gym==0.26.2
+imageio==2.36.1
+matplotlib==3.10.1
+numpy==1.23.5
+stable_baselines3==2.5.0
